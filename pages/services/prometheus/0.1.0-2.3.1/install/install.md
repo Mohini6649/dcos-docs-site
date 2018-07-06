@@ -61,9 +61,14 @@ dcos prometheus CLI commands are not automatically installed to your workstation
    dcos package install prometheus --cli
    ```
 
+## Note : For Prometheus configuration user must be aware of all the required configuration to be mentioned under prometheus.yml
+example : if user requires service discovery he\she would need to setup the configuration under prometheus yml before running the service.
+
+Same way whatever things are not required needs to be removed from prometheus yml and required addtional configuration needs to be mentioend for any addtional features required in the service.
+
 ## Installing HA-alert manager with base build :
    
-   By default , prometheus will launch HA-prometheus server and to spin up with HA-Alert manager , alert manager check box need to be checked.
+   By default , prometheus will launch HA-prometheus server and to spin up with HA-Alert manager , alert manager check box need to be checked and respective alert manager target would need to be mentioned under prometheus yml.
    
 ## Installing HA-Prometheus without Alert Manager and point to HA-Alert Manager launched with base build:
 
@@ -79,7 +84,7 @@ Note: mention global prometheus configuration only when you require federation e
 
 ## Install HA-Prometheus standalone with no linkage to Alert Manager\Global Prometheus:
 
-To Install HA-Prometheus server without alert manager\global prometheus , you should not check on alert manager check box , alert manager target check box and should not put global prometheus configuration.
+To Install HA-Prometheus server without alert manager\global prometheus , you should not check on alert manager check box ,  and should not put global prometheus configuration, alert manager target under prometheus yml.
 
 With these configuration HA-Prometheus server would be launched without pointing to HA-Alert Manager.
 
@@ -123,7 +128,7 @@ The above example will install the service under a path of foldered => path => t
 Note:  The service folder location cannot be changed after initial install.Changing the service location would require installing a new instance of the service against the new location, then copying over any data as necessary to the new instance.
 
 ## Service Discovery
-Each Service Discovery requires parameters to be passed for thier respective SD, Promethesu DC\OS mesos offers follwoing service discovery mechanism :
+Each Service Discovery requires parameters to be passed for thier respective SD, Promethesu DC\OS mesos offers follwoing service discovery mechanism , as per the requirement service discovery configuration needs to be passed under prometheus configuration yml while launching the service.
 
 1. Consul_sd_config :
 Consul SD configurations allow retrieving scrape targets from Consul's Catalog API.
