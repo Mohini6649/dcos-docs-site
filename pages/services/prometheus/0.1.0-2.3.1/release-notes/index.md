@@ -16,8 +16,11 @@ This is a first release and you must perform a fresh install .
 
 ### Features
 Based on the latest stable release of the dcos-commons SDK (Version 0.42.1), this installation provides numerous benefits: 
-- Integration with DC/OS features such as virtual networking and integration with DC/OS access controls.
-- Orchestrated software and configuration update, ability to add new nodes, increase memory and CPU. Installation on DCOS Cluster provides the ability to restart and replace nodes.
+   - Integration with DC/OS features such as virtual networking and integration with DC/OS access controls.
+   - Orchestrated software and configuration update, 
+   - Ability to add new nodes
+   - Increase memory and CPU
+   - Installation on DCOS Cluster provides the ability to restart and replace nodes.
    - Placement constraints for pods.
    - Graceful shutdown for nodes
    - Foldered Installation
@@ -25,7 +28,7 @@ Based on the latest stable release of the dcos-commons SDK (Version 0.42.1), thi
    - Highly Available Alert Manger
    - Federation Support for Prometheus
    - Firing alerts to Alert Manager
-   - NOtification to third party apps like slack via Alert Manager
+   - Notification to third party apps like slack via Alert Manager
    - Auto discovery of cluster agent nodes
    - Service discovery
    - multiple modes of graphing and dashboarding support for grafana 
